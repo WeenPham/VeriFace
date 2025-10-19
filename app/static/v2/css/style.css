@@ -1,0 +1,87 @@
+body {
+    background-image: url('/static/images/DD.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+a {
+    color: #f8f9fa;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #dee2e6;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Custom Button Styles */
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: #3A5FCD;
+    border-color: #3A5FCD;
+}
+
+.btn-primary:hover {
+    background-color: #3151B3;
+    border-color: #3151B3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-outline-secondary {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.card {
+    background-color: rgba(33, 37, 41, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.modal-content {
+    background-color: rgba(33, 37, 41, 0.9);
+}
+
+footer .text-muted {
+    color: white !important;
+}

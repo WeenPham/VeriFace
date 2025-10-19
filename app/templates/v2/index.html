@@ -1,0 +1,74 @@
+{% extends 'v2/base.html' %}
+
+{% block content %}
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">VeriFace</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Uncover digital forgeries or craft hyper-realistic AI-generated videos—all in one powerful, ethical, and user-friendly platform.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="{{ url_for('detect') }}" class="btn btn-primary btn-lg px-4 gap-3">Detect Deepfakes</a>
+        <a href="{{ url_for('generate') }}" class="btn btn-outline-secondary btn-lg px-4">Generate Deepfakes</a>
+      </div>
+    </div>
+</div>
+
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">Features</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <h3 class="fs-2">Deepfake Detection</h3>
+        <p>Upload a video or use your webcam to determine if faces in the content are real or manipulated. Our AI-powered detection system analyzes images and videos with precision.</p>
+      </div>
+      <div class="feature col">
+        <h3 class="fs-2">Deepfake Generation</h3>
+        <p>Swap faces between a source and target image to create deepfake images. Our state-of-the-art deepfake generation tools empower users to create hyper-realistic AI-generated content with ease.</p>
+      </div>
+      <div class="feature col">
+        <h3 class="fs-2">Real-time Processing</h3>
+        <p>Detect deepfakes in real-time using a webcam feed. Get a confidence score, detailed analysis, and forensic insights in seconds.</p>
+      </div>
+    </div>
+</div>
+
+<div class="container px-4 py-5">
+    <h2 class="pb-2 border-bottom">About Me</h2>
+    <div class="row g-4 py-5 align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="/static/images/PNHT.jpg" class="img-fluid rounded-circle profile-image" alt="My Picture">
+        </div>
+        <div class="col-md-8">
+            <h3>Phạm Nguyễn Hoàng Thắng</h3>
+            <p class="lead">I'm a student at FPT University, passionate about AI and digital forensics. VeriFace is my project to develop an AI-powered deepfake detection and generation platform, combining innovation with ethical responsibility. My mission is to make deepfake technology accessible, secure, and transparent for everyone.</p>
+            <!-- Button to trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+              Contact Me
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Contact Information</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Email: ThangPNH.work@gmail.com</p>
+        <p>Phone: 0858878519</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <footer class="py-3 my-4">
+    <p class="text-center text-muted">&copy; 2024 VeriFace</p>
+  </footer>
+</div>
+{% endblock %}

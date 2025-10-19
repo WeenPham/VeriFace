@@ -1,0 +1,46 @@
+{% extends 'v2/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Deepfake Detection</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card bg-dark text-white">
+                <video id="cameraFeed" autoplay class="card-img-top"></video>
+                <img id="deepfakeImage" src="" alt="Deepfake Image" class="card-img-top" style="display:none;">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Controls</h5>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" id="cameraButton">Toggle Camera</button>
+                        <button class="btn btn-primary" id="detectButton">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                            <span class="button-text">Detect Deepfake</span>
+                        </button>
+                        <button class="btn btn-secondary" id="uploadDetectVideoBtn">Upload Video</button>
+                        <input type="file" id="detectVideoUpload" accept="video/*" multiple hidden>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Status</h5>
+                    <p id="statusInfo">DeepFake Detection Turned Off</p>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Parameters</h5>
+                    <p id="parametersInfo">Waiting for data...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/camera.js') }}"></script>
+<script src="{{ url_for('static', filename='v2/js/detect.js') }}"></script>
+{% endblock %}
